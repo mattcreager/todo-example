@@ -22,17 +22,7 @@
                 <button type="submit" class="btn btn-lg btn-primary btn-block"><i class="glyphicon glyphicon-plus-sign glyphicon-white"></i> Add</button>
               </div>
             </form>
-            <ul id="todo-list" class="list-group">
-              <li class="list-group-item clearfix">
-                <div class="checkbox">
-                  <label class="pull-left">
-                    <input type="checkbox" value="false">
-                  </label>
-                  Stuff
-                  <button type="button" class="btn btn-link btn-xs remove-todo"><i class="glyphicon glyphicon-remove"></i></button>
-                </div>
-              </li>
-            </ul>
+            <ul id="todo-list" class="list-group"></ul>
           </div>
           <div class="panel panel-default">
             <div class="panel-body row">
@@ -69,9 +59,8 @@
       <li data-guid="{{ guid }}" class="list-group-item clearfix">
         <div class="checkbox">
           <label class="pull-left">
-            <input type="checkbox" value="{{ complete }}">
-          </label>
-          {{ description }}
+            <input type="checkbox" {{#if complete }}checked{{/if}}>
+          </label>{{ description }}</label>
           <button type="button" class="btn btn-link btn-xs remove-todo"><i class="glyphicon glyphicon-remove"></i></button>
         </div>
       </li>
@@ -84,8 +73,8 @@
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/bower_components/bootstrap/js/dropdown.js"></script>
     <script src="/bower_components/lodash/dist/lodash.min.js"></script>
-    <script src="/js/guid.js"></script>
     <script src="/js/todo.js"></script>
+    <script src="/js/main.js"></script>
 
     <script>
       $('.dropdown-toggle').dropdown();
