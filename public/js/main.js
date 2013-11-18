@@ -4,6 +4,4 @@
   var app = new App(url);
   app.initialize();
 
-  window.app = app;
-
 })(TodoApp);

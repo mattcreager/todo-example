@@ -123,7 +123,7 @@
   };
 
   /**
-   * Add the todo to the page
+   * Add the todo to the view
    * @private
    * @param {object} todo The todo data
    * @param {object} context A GoInstant context object
