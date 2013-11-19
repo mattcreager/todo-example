@@ -19,9 +19,9 @@
       'createTodo',
       'deleteTodo',
       'completeTodo',
-      'addTodo',
-      'removeTodo',
-      'checkTodo'
+      'addHandler',
+      'removeHandler',
+      'completeHandler'
     ]);
   }
 
@@ -41,7 +41,7 @@
         if (err) throw err;
 
         _.each(todos, function(todo, guid) {
-          self.addTodo(todo, guid);
+          self.addHandler(todo, guid);
         });
       });
 
@@ -57,22 +57,23 @@
     // Register UI listeners
     $('form').on('submit', this.createTodo);
     this.el.list.on('click', '.glyphicon-remove', this.deleteTodo);
-    this.el.list.on('change', 'input', this.completeTodo);
+    this.el.list.on('click', 'input', this.completeTodo);
 
     // Register GoInstant listeners
     this.namespace.on('add', {
-      listener: this.addTodo,
+      listener: this.addHandler,
       local: true
     });
 
     this.namespace.on('remove', {
-      listener: this.removeTodo,
+      listener: this.removeHandler,
       local: true,
       bubble: true
     });
 
     this.namespace.on('set', {
-      listener: this.checkTodo,
+      listener: this.completeHandler,
+      local: true,
       bubble: true
     });
   };
@@ -120,6 +121,8 @@
     completeKey.set(complete, function(err) {
       if (err) throw err;
     });
+
+    return false;
   };
 
   /**
@@ -128,7 +131,7 @@
    * @param {object} todo The todo data
    * @param {object} context A GoInstant context object
    */
-  TodoApp.prototype.addTodo = function (todo, context) {
+  TodoApp.prototype.addHandler = function (todo, context) {
     var todoGuid = context;
 
     if (_.isObject(todoGuid)) {
@@ -148,7 +151,7 @@
    * @param {object} todo The todo data
    * @param {object} context A GoInstant context object
    */
-  TodoApp.prototype.removeTodo = function(todo, context) {
+  TodoApp.prototype.removeHandler = function(todo, context) {
     var todoGuid = context.key.split('/')[2];
 
     var $todo = this.el.list.find('li[data-guid="' + todoGuid + '"]');
@@ -156,12 +159,12 @@
   };
 
   /**
-  * Check the todo off in the view
+  * Check off the todo in the view
   * @private
   * @param {boolean} complete The todo's complete state
   * @param {object} context A GoInstant context object
   */
-  TodoApp.prototype.checkTodo = function(complete, context) {
+  TodoApp.prototype.completeHandler = function(complete, context) {
     var todoGuid = context.key.split('/')[2];
 
     var $todo = this.el.list.find('li[data-guid="' + todoGuid + '"]');
