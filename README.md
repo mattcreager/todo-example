@@ -12,11 +12,11 @@ View the [live demo of this code here](https://goangular-todo.herokuapp.com/).
 ### Initial Setup
 
 
-##### 1. Install + Config Heroku toolbelt; [quick link](https://toolbelt.heroku.com)
+##### 1. Install and configure the [Heroku toolbelt](https://toolbelt.heroku.com)
 ##### 2. Create a heroku app
 
 ```
-heroku apps:create yourmapsapp
+heroku apps:create yourtodoapp
 ```
 
 ##### 3. Add the GoInstant Add-on to the app
@@ -32,7 +32,7 @@ heroku addons:add goinstant
 ### Local Setup
 
 
-If you'd like to work on the maps demo on your local machine, you'll need to do some setup.
+If you'd like to work on the todo demo on your local machine, you'll need to do some setup.
 
 #### Prerequisites
 
