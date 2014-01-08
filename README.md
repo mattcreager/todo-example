@@ -9,7 +9,8 @@ View the [live demo of this code here](https://goangular-todo.herokuapp.com/).
 ## Running the Demo Yourself
 
 
-#### Initial Setup
+### Initial Setup
+
 
 ##### 1. Install + Config Heroku toolbelt; [quick link](https://toolbelt.heroku.com)
 ##### 2. Create a heroku app
@@ -27,6 +28,7 @@ heroku addons:add goinstant
 ##### 4. Continue via either the Local Setup or Heroku Setup
 
 ### Local Setup
+
 
 If you'd like to work on the maps demo on your local machine, you'll need to do some setup.
 
@@ -53,6 +55,7 @@ heroku config:pull
 ##### 4. Execute `foreman start` from repo root to start the application
 
 ### Heroku Setup
+
 
 Following initial setup, you simply have to push to the heroku git master to launch the app, below are a few different ways
 
