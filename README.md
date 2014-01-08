@@ -2,7 +2,7 @@
 
 This repository demonstrates the use of [GoAngular](https://developers.goinstant.com/v1/GoAngular/index.html) to create an example todo app.
 
-![side-by-side demo screenshot](./static/img/screenshot.png)
+![demo screenshot](./static/img/screenshot.png)
 
 View the [live demo of this code here](https://goangular-todo.herokuapp.com/).
 
