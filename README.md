@@ -25,6 +25,8 @@ heroku apps:create yourmapsapp
 heroku addons:add goinstant
 ```
 
+**Note**: The Heroku addon is currently in alpha testing! Please email [contact@goinstant.com](mailto:contact@goinstant.com) to request alpha access.
+
 ##### 4. Continue via either the Local Setup or Heroku Setup
 
 ### Local Setup
