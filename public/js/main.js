@@ -1,7 +1,6 @@
 (function(App) {
 
-  var url = 'https://goinstant.net/mattcreager/DingDong';
-  var app = new App(url);
+  var app = new App(window.GOINSTANT_CONNECT_URL);
   app.initialize();
 
 })(TodoApp);
