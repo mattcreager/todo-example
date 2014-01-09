@@ -92,6 +92,6 @@ You can check it out and <a href="https://goinstant.com/signup">sign up for free
 
 # Legal
 
-&copy; 2013 GoInstant Inc., a salesforce.com company
+&copy; 2014 GoInstant Inc., a salesforce.com company
 
 Licensed under the 3-clause BSD license, see `LICENSE` file for details.
