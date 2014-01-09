@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "GoAngular Todo Example",
   "dependencies": {
-    "harp": "0.8.x",
+    "express": "3.4.7",
+    "ejs-locals": "1.0.2",
     "bower": "~1.2.7"
   },
   "engines": {
